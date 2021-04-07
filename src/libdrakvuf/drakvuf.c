@@ -1112,6 +1112,7 @@ bool drakvuf_set_vcpu_gprs(drakvuf_t drakvuf, unsigned int vcpu, registers_t* re
     if ( !xen_get_vcpu_ctx(drakvuf->xen, drakvuf->domID, vcpu, &ctx) )
         return false;
 
+#if defined(__i386__) || defined(__x86_64__)
     // HVM guests are always treated as x64 by Xen
     ctx.x64.user_regs.rip = regs->x86.rip;
     ctx.x64.user_regs.rax = regs->x86.rax;
@@ -1128,6 +1129,7 @@ bool drakvuf_set_vcpu_gprs(drakvuf_t drakvuf, unsigned int vcpu, registers_t* re
     ctx.x64.user_regs.r13 = regs->x86.r13;
     ctx.x64.user_regs.r14 = regs->x86.r14;
     ctx.x64.user_regs.r15 = regs->x86.r15;
+#endif
 
     return xen_set_vcpu_ctx(drakvuf->xen, drakvuf->domID, vcpu, &ctx);
 }

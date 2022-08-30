@@ -4,7 +4,8 @@
 	ignore = dirty
 [submodule "libvmi"]
 	path = libvmi
-	url = https://github.com/libvmi/libvmi
+	url = https://github.com/iijlab/libvmi
+	branch = support_on_arm64
 	ignore = dirty
 [submodule "volatility3"]
 	path = volatility3
@@ -12,7 +13,8 @@
 	ignore = dirty
 [submodule "dwarf2json"]
 	path = dwarf2json
-	url = https://github.com/tklengyel/dwarf2json
+	url = https://github.com/iijlab/dwarf2json
+	branch = support_on_arm64
 	ignore = dirty
 [submodule "json-c"]
 	path = json-c

@@ -1,0 +1,5 @@
+# docker
+.stamp_docker*
+
+# *.deb
+/out/*

@@ -1,10 +1,11 @@
 [submodule "xen"]
 	path = xen
-	url = https://github.com/xen-project/xen
+	url = https://github.com/iijlab/xen.git
+	branch = support_on_arm64
 	ignore = dirty
 [submodule "libvmi"]
 	path = libvmi
-	url = https://github.com/iijlab/libvmi
+	url = https://github.com/iijlab/libvmi.git
 	branch = support_on_arm64
 	ignore = dirty
 [submodule "volatility3"]
@@ -13,7 +14,7 @@
 	ignore = dirty
 [submodule "dwarf2json"]
 	path = dwarf2json
-	url = https://github.com/iijlab/dwarf2json
+	url = https://github.com/iijlab/dwarf2json.git
 	branch = support_on_arm64
 	ignore = dirty
 [submodule "json-c"]
